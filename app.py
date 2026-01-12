@@ -59,11 +59,11 @@ def execute(inputPath: str, outputCompression: str, outputFormat: str, outputNam
         splitOutput: list = list(output)
   
         while True:
-            splitInput.pop(-1)
-            if splitInput[-1] == "/":
+            splitOutput.pop(-1)
+            if splitOutput[-1] == "/":
                 break
             
-        cleanedOutput: str = "".join(splitInput)
+        cleanedOutput: str = "".join(splitOutput)
         
         return ["completed", cleanedOutput]
     
